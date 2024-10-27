@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Timer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html, body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background: #303030;
+            width: 30%;
+            height: 50%;
+            border-radius: 20px;
+        }
+        @media only screen and (max-width: 768px){
+            .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background: #303030;
+            width: 80%;
+            height: 50%;
+            border-radius: 20px;
+        }
+        }
+        .container h1{
+            color: #fff;
+            font-size: 45px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .timer{
+            font-size: 60px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .container div{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .container button{
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+        }
+        .paused{
+            color: rgb(221, 54, 54);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h1>My Timer</h1>
+        <p class="timer">00:00:00</p>
+        <div>
+            <button class="play">Play</button>
+            <button class="pause">Pause</button>
+            <button class="reset">Reset</button>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
